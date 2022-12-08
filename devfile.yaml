@@ -3,6 +3,8 @@ metadata:
   name: devfile-test
   version: 1.0.0
   displayName: Test
+attributes:
+  che-theia.eclipse.org/sidecar-policy: USE_DEV_CONTAINER  
 components:
   - name: "solution-explorer"
     container:
