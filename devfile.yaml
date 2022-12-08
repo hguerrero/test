@@ -25,3 +25,6 @@ components:
       volumeMounts:
         - name: tutorial-storage
           path: /opt/user-walkthroughs
+  - name: tutorial-storage
+    volume:
+      size: 256Mi
