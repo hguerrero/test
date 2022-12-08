@@ -13,7 +13,7 @@ components:
         - name: THREESCALE_WILDCARD_DOMAIN
           value: local.localdomain
         - name: OPENSHIFT_VERSION
-          value: '4'
+          value: "4"
         - name: WALKTHROUGH_LOCATIONS
           value: >-
             https://github.com/brunoNetId/testche?walkthroughsFolder=/docs/labs
@@ -28,3 +28,4 @@ components:
   - name: tutorial-storage
     volume:
       size: 256Mi
+      ephemeral: true
