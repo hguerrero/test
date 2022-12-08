@@ -1,0 +1,27 @@
+schemaVersion: 2.2.0
+metadata:
+  name: devfile-test
+  version: 1.0.0
+  displayName: Test
+components:
+  - name: "solution-explorer"
+    container:
+      image: quay.io/redhatintegration/tutorial-web-app:latest
+      env:
+        - name: NODE_ENV
+          value: production
+        - name: THREESCALE_WILDCARD_DOMAIN
+          value: local.localdomain
+        - name: OPENSHIFT_VERSION
+          value: '4'
+        - name: WALKTHROUGH_LOCATIONS
+          value: >-
+            https://github.com/brunoNetId/testche?walkthroughsFolder=/docs/labs
+      endpoints:
+        - name: tutorial
+          exposure: public
+          targetPort: 5001
+      memoryLimit: 512Mi
+      volumeMounts:
+        - name: tutorial-storage
+          path: /opt/user-walkthroughs
